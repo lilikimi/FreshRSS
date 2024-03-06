@@ -1,5 +1,16 @@
 {
-  "version": 2,
-  "builds": [{ "src": "index.php", "use": "@vercel/php" }],
-  "routes": [{ "src": "/(.*)", "dest": "index.php" }]
+  "build": "npm run build",
+  "env": "production",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "FRESH_RSS_DB_HOST": "localhost",
+    "FRESH_RSS_DB_USER": "username",
+    "FRESH_RSS_DB_PASSWORD": "password",
+    "FRESH_RSS_DB_DATABASE": "freshrss"
+  }
 }
